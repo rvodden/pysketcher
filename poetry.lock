@@ -214,7 +214,7 @@ pyflakes = ">=2.2.0,<2.3.0"
 
 [[package]]
 name = "hypothesis"
-version = "5.35.3"
+version = "5.38.0"
 description = "A library for property-based testing"
 category = "dev"
 optional = false
@@ -225,7 +225,7 @@ attrs = ">=19.2.0"
 sortedcontainers = ">=2.1.0,<3.0.0"
 
 [package.extras]
-all = ["black (>=19.10b0)", "click (>=7.0)", "django (>=2.2)", "dpcontracts (>=0.4)", "lark-parser (>=0.6.5)", "numpy (>=1.9.0)", "pandas (>=0.19)", "pytest (>=4.3)", "python-dateutil (>=1.4)", "pytz (>=2014.1)"]
+all = ["black (>=19.10b0)", "click (>=7.0)", "django (>=2.2)", "dpcontracts (>=0.4)", "lark-parser (>=0.6.5)", "numpy (>=1.9.0)", "pandas (>=0.19)", "pytest (>=4.3)", "python-dateutil (>=1.4)", "pytz (>=2014.1)", "redis (>=3.0.0)"]
 cli = ["click (>=7.0)", "black (>=19.10b0)"]
 dateutil = ["python-dateutil (>=1.4)"]
 django = ["pytz (>=2014.1)", "django (>=2.2)"]
@@ -236,6 +236,7 @@ numpy = ["numpy (>=1.9.0)"]
 pandas = ["pandas (>=0.19)"]
 pytest = ["pytest (>=4.3)"]
 pytz = ["pytz (>=2014.1)"]
+redis = ["redis (>=3.0.0)"]
 
 [[package]]
 name = "idna"
@@ -822,7 +823,7 @@ test = ["z3c.testsetup (>=0.8.4)", "zope.testing", "zope.testrunner", "wheel"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "460c82662400363eedf1a6c29e430b309fd64bc03896c1137b5460692bf25d79"
+content-hash = "8406ad3e2baba9c8e0dc4fdbc11d909e176afa8cb78377e87a4b5694c4e75587"
 
 [metadata.files]
 appdirs = [
@@ -987,8 +988,8 @@ flake8 = [
     {file = "flake8-3.8.3.tar.gz", hash = "sha256:f04b9fcbac03b0a3e58c0ab3a0ecc462e023a9faf046d57794184028123aa208"},
 ]
 hypothesis = [
-    {file = "hypothesis-5.35.3-py3-none-any.whl", hash = "sha256:ee7bad5a617beed17090375f6e8e0f4f06677e9db92eaf598a186e69479843fa"},
-    {file = "hypothesis-5.35.3.tar.gz", hash = "sha256:a480386934cdfb2e69adb3333e7156ad9149b1935a910e44041a87c5bd8374dd"},
+    {file = "hypothesis-5.38.0-py3-none-any.whl", hash = "sha256:156ba7c417c39ab440602dd9f59e06b942dcf13c74bbecbb0732f8f40c8cd226"},
+    {file = "hypothesis-5.38.0.tar.gz", hash = "sha256:fe893deadaa7e85703537f9956d373edf3986179fe0db2cfad4a9cddcd8b217c"},
 ]
 idna = [
     {file = "idna-2.10-py2.py3-none-any.whl", hash = "sha256:b97d804b1e9b523befed77c48dacec60e6dcb0b5391d57af6a65a312a90648c0"},
