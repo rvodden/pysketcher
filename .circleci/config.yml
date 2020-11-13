@@ -28,12 +28,12 @@ jobs:
     steps:
       - attach_workspace:
           at: .
-      - python/install-packages:
-          pkg-manager: poetry
       - run:
           name: Upgrade poetry
           command: |
               poetry self update 1.1.4
+      - python/install-packages:
+            pkg-manager: poetry
       - run:
           name: Setup Code Climate test-reporter
           command: |
