@@ -1,5 +1,10 @@
 ---
 version: 2.1
+executors:
+    python:
+        docker:
+            - image: rvodden/pysketcher-build:0.0.495
+
 jobs:
   checkout:
     executor: python/default
@@ -24,7 +29,7 @@ jobs:
             paths:
                 - .
   build:
-    executor: python/default
+    executor: python
     steps:
       - attach_workspace:
           at: .
