@@ -30,7 +30,7 @@ nox = "^2020.8.22"
 
 [tool.poetry.dev-dependencies]
 hypothesis = "^5.41.4"
-pytest = "^6.1.1"
+pytest = "^6.2.0"
 pylint = "^2.6.0"
 flake8 = "^3.7.9"
 coverage = "^5.3"
