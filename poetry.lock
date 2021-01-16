@@ -10,7 +10,7 @@ python-versions = "*"
 name = "appdirs"
 version = "1.4.4"
 description = "A small Python module for determining appropriate platform-specific dirs, e.g. a \"user data dir\"."
-category = "main"
+category = "dev"
 optional = false
 python-versions = "*"
 
@@ -18,7 +18,7 @@ python-versions = "*"
 name = "argcomplete"
 version = "1.12.2"
 description = "Bash tab completion for argparse"
-category = "main"
+category = "dev"
 optional = false
 python-versions = "*"
 
@@ -231,7 +231,7 @@ requests = ">=2.7.9"
 name = "colorama"
 version = "0.4.4"
 description = "Cross-platform colored terminal text."
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
@@ -239,7 +239,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 name = "colorlog"
 version = "4.6.2"
 description = "Log formatting with colors!"
-category = "main"
+category = "dev"
 optional = false
 python-versions = "*"
 
@@ -248,7 +248,7 @@ colorama = {version = "*", markers = "sys_platform == \"win32\""}
 
 [[package]]
 name = "commitizen"
-version = "2.10.0"
+version = "2.13.0"
 description = "Python commitizen client tool"
 category = "dev"
 optional = false
@@ -263,7 +263,7 @@ packaging = ">=19,<21"
 pyyaml = ">=3.08"
 questionary = ">=1.4.0,<2.0.0"
 termcolor = ">=1.1,<2.0"
-tomlkit = ">=0.5.3,<0.6.0"
+tomlkit = ">=0.5.3,<1.0.0"
 
 [[package]]
 name = "commonmark"
@@ -337,7 +337,7 @@ python-versions = ">=3.6"
 name = "distlib"
 version = "0.3.1"
 description = "Distribution utilities"
-category = "main"
+category = "dev"
 optional = false
 python-versions = "*"
 
@@ -369,7 +369,7 @@ pipenv = ["pipenv"]
 name = "filelock"
 version = "3.0.12"
 description = "A platform independent file lock."
-category = "main"
+category = "dev"
 optional = false
 python-versions = "*"
 
@@ -708,7 +708,7 @@ python-versions = "*"
 name = "nox"
 version = "2020.8.22"
 description = "Flexible test automation."
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.5"
 
@@ -846,7 +846,7 @@ wcwidth = "*"
 name = "py"
 version = "1.9.0"
 description = "library with cross-python path, ini-parsing, io, code, log facilities"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
@@ -1392,7 +1392,7 @@ socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 name = "virtualenv"
 version = "20.2.1"
 description = "Virtual Python Environment builder"
-category = "main"
+category = "dev"
 optional = false
 python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,>=2.7"
 
@@ -1471,7 +1471,7 @@ docs = []
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "a6b91aa401342db49de7aefd2d0ce24a7b7e943516ac71951604cb563ac9f87e"
+content-hash = "02b5db15afa1b34a49e7404f9bc1343378165730ee20d72e96d0c0e925709ea8"
 
 [metadata.files]
 alabaster = [
@@ -1593,8 +1593,8 @@ colorlog = [
     {file = "colorlog-4.6.2.tar.gz", hash = "sha256:54e5f153419c22afc283c130c4201db19a3dbd83221a0f4657d5ee66234a2ea4"},
 ]
 commitizen = [
-    {file = "commitizen-2.10.0-py3-none-any.whl", hash = "sha256:e2bb9baa0f4115d02a044a096cb90e5a9faa7b39e46a581530ce94d7578ae7e6"},
-    {file = "commitizen-2.10.0.tar.gz", hash = "sha256:33e515940e49355381d29f41081124c0203d92dfce399b82ea4b04a74fc16cba"},
+    {file = "commitizen-2.13.0-py3-none-any.whl", hash = "sha256:919143ec234597004027d6f254276be8d95acabd917d07cb6bf34c63283eb3e5"},
+    {file = "commitizen-2.13.0.tar.gz", hash = "sha256:bef4c1dcb63eb8fc5cb6ca4bfa547c227caab8f69732c0fd72cb9f41a8de2e35"},
 ]
 commonmark = [
     {file = "commonmark-0.9.1-py2.py3-none-any.whl", hash = "sha256:da2f38c92590f83de410ba1a3cbceafbc74fee9def35f9251ba9a971d6d66fd9"},
