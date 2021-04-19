@@ -248,7 +248,7 @@ colorama = {version = "*", markers = "sys_platform == \"win32\""}
 
 [[package]]
 name = "commitizen"
-version = "2.17.2"
+version = "2.17.3"
 description = "Python commitizen client tool"
 category = "dev"
 optional = false
@@ -1481,7 +1481,7 @@ docs = []
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "945f1549e6d235e1506838e0f6847cc4c89b4fa9a47b9e46dcaf4b9707845c97"
+content-hash = "b6db818a08209488bceb498907890e69a42705e2f643871ca2b088b8d2ab5e58"
 
 [metadata.files]
 alabaster = [
@@ -1604,8 +1604,8 @@ colorlog = [
     {file = "colorlog-4.8.0.tar.gz", hash = "sha256:59b53160c60902c405cdec28d38356e09d40686659048893e026ecbd589516b1"},
 ]
 commitizen = [
-    {file = "commitizen-2.17.2-py3-none-any.whl", hash = "sha256:e4956bcbba5b53dfad77d3b359fbb83281b9c0c55d4f805072c84bc5f04f88d0"},
-    {file = "commitizen-2.17.2.tar.gz", hash = "sha256:c43a07b2eb4dae86975723391d9405a2d17cb415d8ba094c480ac8ce99ccb687"},
+    {file = "commitizen-2.17.3-py3-none-any.whl", hash = "sha256:2e22e538155b296faa14d5bb134b5edf85a16a11438512d8211874e964802a4f"},
+    {file = "commitizen-2.17.3.tar.gz", hash = "sha256:62fb10780c82555bd8780e97b1fddc86aec4912270101e1d8071b9b47af00c00"},
 ]
 commonmark = [
     {file = "commonmark-0.9.1-py2.py3-none-any.whl", hash = "sha256:da2f38c92590f83de410ba1a3cbceafbc74fee9def35f9251ba9a971d6d66fd9"},
@@ -1716,6 +1716,7 @@ flake8-bandit = [
 ]
 flake8-black = [
     {file = "flake8-black-0.2.1.tar.gz", hash = "sha256:f26651bc10db786c03f4093414f7c9ea982ed8a244cec323c984feeffdf4c118"},
+    {file = "flake8_black-0.2.1-py3-none-any.whl", hash = "sha256:941514149cb8b489cb17a4bb1cf18d84375db3b34381bb018de83509437931a0"},
 ]
 flake8-bugbear = [
     {file = "flake8-bugbear-21.4.3.tar.gz", hash = "sha256:2346c81f889955b39e4a368eb7d508de723d9de05716c287dc860a4073dc57e7"},
