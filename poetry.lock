@@ -486,7 +486,7 @@ gitdb = ">=4.0.1,<5"
 
 [[package]]
 name = "hypothesis"
-version = "6.9.1"
+version = "6.10.0"
 description = "A library for property-based testing"
 category = "dev"
 optional = false
@@ -1481,7 +1481,7 @@ docs = []
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "945f1549e6d235e1506838e0f6847cc4c89b4fa9a47b9e46dcaf4b9707845c97"
+content-hash = "be7a4a449f47eef20167df97a4ca3423157d3492a9ac1dd7a406a622fb72560d"
 
 [metadata.files]
 alabaster = [
@@ -1716,6 +1716,7 @@ flake8-bandit = [
 ]
 flake8-black = [
     {file = "flake8-black-0.2.1.tar.gz", hash = "sha256:f26651bc10db786c03f4093414f7c9ea982ed8a244cec323c984feeffdf4c118"},
+    {file = "flake8_black-0.2.1-py3-none-any.whl", hash = "sha256:941514149cb8b489cb17a4bb1cf18d84375db3b34381bb018de83509437931a0"},
 ]
 flake8-bugbear = [
     {file = "flake8-bugbear-21.4.3.tar.gz", hash = "sha256:2346c81f889955b39e4a368eb7d508de723d9de05716c287dc860a4073dc57e7"},
@@ -1742,8 +1743,8 @@ gitpython = [
     {file = "GitPython-3.1.14.tar.gz", hash = "sha256:be27633e7509e58391f10207cd32b2a6cf5b908f92d9cd30da2e514e1137af61"},
 ]
 hypothesis = [
-    {file = "hypothesis-6.9.1-py3-none-any.whl", hash = "sha256:d2b7d48acfe1fb7eaba252e1975f79e1f188b4eee9e25e5265f260b8ac3fdbc6"},
-    {file = "hypothesis-6.9.1.tar.gz", hash = "sha256:5e25a0be23b1ff81ecf07e87d82e2e39a79c83c1458178af202ffe4b0183bcca"},
+    {file = "hypothesis-6.10.0-py3-none-any.whl", hash = "sha256:1a00a4e3ef40041b2c072deab9c71e307bc5354bb4a102ef22ae8c23fa8b3970"},
+    {file = "hypothesis-6.10.0.tar.gz", hash = "sha256:9f8c130b1278d30cb3cc64e3a4aacb88c4906155772beed90ce33e06794e1ee0"},
 ]
 identify = [
     {file = "identify-2.2.2-py2.py3-none-any.whl", hash = "sha256:c7c0f590526008911ccc5ceee6ed7b085cbc92f7b6591d0ee5913a130ad64034"},
