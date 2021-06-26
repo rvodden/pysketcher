@@ -74,7 +74,10 @@ class Arc(Curve):
             ValueError: if ``theta`` is beyond the bounds of the arc.
         """
         if 0.0 < self._arc_angle < theta or theta < self._arc_angle < 0.0:
-            raise ValueError(f'Theta ({theta}) is outside the bounds of the arc (0.0 , {self._arc_angle})')
+            raise ValueError(
+                f"Theta ({theta}) is outside the bounds "
+                "of the arc (0.0 , {self._arc_angle})"
+            )
 
         iota = Angle(self.start_angle + theta)
         ret_point = Point(
