@@ -32,9 +32,7 @@ def main() -> None:
     unit_rod_vec = rod_vec.unit_vector
     mass_symbol = ps.Text("$m$", mass_pt + unit_rod_vec * (L / 10.0))
 
-    length = ps.DistanceWithText("$L$", P, mass_pt)
-    # Displace length indication
-    length = length.translate(rod_vec.normal * (L / 15))
+    length = ps.LinearDimension("$L$", mass_pt, P)
     gravity = ps.Gravity(start=P + ps.Point(0.8 * L, 0), length=L / 3)
 
     def set_dashed_thin_blackline(*objects: ps.Shape):
@@ -77,13 +75,13 @@ def main() -> None:
         "$mg$",
         mass_pt,
         mass_pt + ps.Point(0.0, -L / 5.0),
-        text_position=ps.ArrowWithText.TextPosition.END,
+        text_position=ps.TextPosition.END,
     )
     rod_force = ps.Force(
         "$S$",
         mass_pt,
         mass_pt - rod_vec.unit_vector * (L / 3.0),
-        text_position=ps.ArrowWithText.TextPosition.END,
+        text_position=ps.TextPosition.END,
     )
 
     mass.style.fill_color = ps.Style.Color.BLUE
@@ -102,7 +100,7 @@ def main() -> None:
         r"${\sim}|v|v$",
         mass_pt,
         mass_pt + rod_vec.normal * (L / 6.0),
-        text_position=ps.ArrowWithText.TextPosition.END,
+        text_position=ps.TextPosition.END,
         # spacing = Point(0.04, 0.005),
     )
 
@@ -114,14 +112,14 @@ def main() -> None:
         r"$\vec{i}_r$",
         P,
         P + rod_vec.unit_vector * (L / 10.0),
-        text_position=ps.ArrowWithText.TextPosition.END,
+        text_position=ps.TextPosition.END,
     )
 
     ith = ps.Force(
         r"$\vec{i}_{\theta}$",
         P,
         P + rod_vec.normal * (L / 10.0),
-        text_position=ps.ArrowWithText.TextPosition.END,
+        text_position=ps.TextPosition.END,
     )
 
     body_diagram_shapes["ir"] = ir

@@ -8,9 +8,9 @@ import pytest
 from pysketcher import (
     Axis,
     Curve,
-    DistanceWithText,
     Figure,
     Force,
+    LinearDimension,
     Moment,
     Point,
     Rectangle,
@@ -81,8 +81,8 @@ def main() -> None:
     M1.line_color = "black"
 
     ab_level = Point(0, 3 * h)
-    a_dim = DistanceWithText("$a$", A - ab_level, B - ab_level)
-    b_dim = DistanceWithText("$b$", B - ab_level, C - ab_level)
+    a_dim = LinearDimension("$a$", A - ab_level, B - ab_level)
+    b_dim = LinearDimension("$b$", B - ab_level, C - ab_level)
     dims = Composition({"a": a_dim, "b": b_dim})
     symbols = Composition(
         {

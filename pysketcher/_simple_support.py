@@ -1,7 +1,5 @@
-from pysketcher._distance_with_text import DistanceWithText
 from pysketcher._point import Point
 from pysketcher._rectangle import Rectangle
-from pysketcher._text import Text
 from pysketcher._triangle import Triangle
 from pysketcher.composition import Composition
 
@@ -44,10 +42,3 @@ class SimpleSupport(Composition):
         rectangle = Rectangle(p2, size, h)
         shapes = {"triangle": triangle, "rectangle": rectangle}
         super().__init__(shapes)
-
-        self._dimensions = {
-            "position": Text("position", position),
-            "size": DistanceWithText(
-                "size", Point(p2.x, p2.y - size), Point(p2.x + size, p2.y - size)
-            ),
-        }
