@@ -40,17 +40,19 @@ from pysketcher._uniform_load import UniformLoad
 from pysketcher._velocity_profile import VelocityProfile
 from pysketcher._wall import Wall
 from pysketcher._wheel import Wheel
+from pysketcher.annotation import LineAnnotation
 from pysketcher.composition import Composition, ShapeWithText
+from pysketcher.dimension import AngularDimension, LinearDimension, RadialDimension
 
 __all__ = [
+    "AngularDimension",
+    "ArrowWithText",
+    "Axis",
     "Angle",
     "Arc",
     "ArcWithText",
     "Arrow",
     "DoubleArrow",
-    "ArrowWithText",
-    "Axis",
-    "SimpleSupport",
     "Circle",
     "CubicBezier",
     "Composition",
@@ -63,10 +65,14 @@ __all__ = [
     "Force",
     "Gravity",
     "Line",
+    "LineAnnotation",
+    "LinearDimension",
     "Moment",
     "Point",
+    "RadialDimension",
     "Rectangle",
     "Shape",
+    "SimpleSupport",
     "SketchyFunc1",
     "SketchyFunc2",
     "SketchyFunc3",

@@ -121,6 +121,11 @@ class Arc(Curve):
         """The point at which the arc ends."""
         return self(self.arc_angle)
 
+    @property
+    def mid(self) -> Point:
+        """The middle of the arc."""
+        return self(self.arc_angle / 2)
+
     def translate(self, vec: Point) -> "Arc":
         """Translates the arc by the specified vector.
 
@@ -182,7 +187,7 @@ class ArcWithText(ShapeWithText):
     ):
         arc = Arc(center, radius, start_angle, arc_angle, resolution)
         mid = arc(arc_angle / 2.0)
-        normal = (mid - center).unit_vector()
+        normal = (mid - center).unit_vector
         text_pos = mid - (normal * text_spacing)
         text = Text(text, text_pos)
         super().__init__(arc, text)

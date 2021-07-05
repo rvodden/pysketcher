@@ -82,7 +82,7 @@ class DistanceWithText(ShapeWithText):
                 start, end = end, start
                 text_position = text_position.swap()
 
-        normal = (end - start).normal()
+        normal = (end - start).normal
 
         if text_position == self.TextPosition.MIDDLE:
             # if the text is in the middle of the line, then place it

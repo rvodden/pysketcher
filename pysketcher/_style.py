@@ -182,7 +182,7 @@ class TextStyle(Style):
         self,
     ):
         super().__init__()
-        self._font_size = 12
+        self._font_size = 8
         self._font_family = self.FontFamily.SANS
         self._alignment = self.Alignment.CENTER
 
