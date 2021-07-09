@@ -21,12 +21,14 @@ def main() -> None:
 
     vertical = ps.Line(P, P - ps.Point(0, L))
     path = ps.Arc(P, L, -np.pi / 2, a)
-    theta = ps.ArcWithText(r"$\theta$", P, L / 4, -np.pi / 2, a, text_spacing=1 / 30.0)
-
     mass_pt = path.end
     rod = ps.Line(P, mass_pt)
 
     mass = ps.Circle(mass_pt, L / 20.0)
+    theta = ps.AngularDimension(
+        r"$\theta$", P + ps.Point(0, -L / 4), P + (mass_pt - P).unit_vector * (L / 4), P
+    )
+    theta.extension_lines = False
 
     rod_vec = rod.end - rod.start
     unit_rod_vec = rod_vec.unit_vector
@@ -43,7 +45,6 @@ def main() -> None:
             obj.set_line_width(1)
 
     set_dashed_thin_blackline(vertical, path)
-    theta.style.arrow = ps.Style.ArrowStyle.DOUBLE
     mass.style.fill_color = ps.Style.Color.BLUE
 
     model = ps.Composition(
@@ -66,10 +67,9 @@ def main() -> None:
     vertical2 = ps.Line(rod.start, rod.start + ps.Point(0.0, -L / 3.0))
     set_dashed_thin_blackline(vertical2)
     set_dashed_thin_blackline(rod)
-    angle2 = ps.ArcWithText(
-        r"$\theta$", rod.start, L / 6, -np.pi / 2, a, text_spacing=1 / 30.0
-    )
+    angle2 = ps.Arc(rod.start, L / 6, -np.pi / 2, a)
     angle2.style.arrow = ps.Style.ArrowStyle.DOUBLE
+    angle2_label = ps.ArcAnnotation(r"$\theta$", angle2)
 
     mg_force = ps.Force(
         "$mg$",
@@ -92,6 +92,7 @@ def main() -> None:
         "rod": rod,
         "vertical": vertical2,
         "theta": angle2,
+        "theta_label": angle2_label,
         "body": mass,
         "m": mass_symbol,
     }
@@ -129,7 +130,6 @@ def main() -> None:
     fig.erase()
     body_diagram = ps.Composition(body_diagram_shapes)
     fig.add(body_diagram)
-    # drawing_tool.display('Free body diagram')
     fig.show()
 
 

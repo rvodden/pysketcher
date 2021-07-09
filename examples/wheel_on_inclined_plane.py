@@ -4,7 +4,8 @@ import numpy as np
 
 from pysketcher import (
     Angle,
-    ArcWithText,
+    Arc,
+    ArcAnnotation,
     Axis,
     Circle,
     Figure,
@@ -33,9 +34,8 @@ def main():
     wall = Wall([A, B], thickness=-0.25)
     wall.style.fill_pattern = Style.FillPattern.UP_LEFT_TO_RIGHT
 
-    angle = ArcWithText(
-        r"$\theta$", center=B, radius=3, start_angle=np.pi - theta, arc_angle=theta
-    )
+    angle = Arc(center=B, radius=3, start_angle=np.pi - theta, arc_angle=theta)
+    angleLabel = ArcAnnotation(r"$\theta$", angle)
     angle.style.line_color = Style.Color.BLACK
     angle.style.line_width = 1
 
@@ -84,6 +84,7 @@ def main():
     fixed = Composition(
         {
             "angle": angle,
+            "angle_label": angleLabel,
             "inclined wall": wall,
             "wheel": wheel,
             "ground": ground,

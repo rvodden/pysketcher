@@ -30,11 +30,13 @@ def pendulum(theta, S, mg, drag) -> ps.Composition:
     P = ps.Point(W / 2, 0.9 * H)  # rotation point
 
     path = ps.Arc(P, L, -ps.Angle(np.pi / 2), a)
-    angle = ps.ArcWithText(r"$\theta$", P, L / 4, -ps.Angle(np.pi / 2), a)
-    angle.set_line_color(ps.Style.Color.BLACK)
-
     mass_pt = path.end
     rod = ps.Line(P, mass_pt)
+
+    theta = ps.AngularDimension(
+        r"$\theta$", P + ps.Point(0, -L / 4), P + (mass_pt - P).unit_vector * (L / 4), P
+    )
+    theta.extension_lines = False
 
     mass = ps.Circle(mass_pt, L / 30.0).set_fill_color(ps.Style.Color.BLUE)
     rod_vec = rod.end - rod.start
@@ -61,7 +63,7 @@ def pendulum(theta, S, mg, drag) -> ps.Composition:
             "body": mass,
             "rod": rod,
             "vertical": vertical,
-            "theta": angle,
+            "theta": theta,
             "path": path,
             "g": gravity,
             # "L": length,

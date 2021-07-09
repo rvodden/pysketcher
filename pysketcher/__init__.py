@@ -7,7 +7,7 @@ except PackageNotFoundError:
     pass
 
 from pysketcher._angle import Angle
-from pysketcher._arc import Arc, ArcWithText
+from pysketcher._arc import Arc
 from pysketcher._arrow import Arrow, DoubleArrow
 from pysketcher._axis import Axis
 from pysketcher._circle import Circle
@@ -38,7 +38,7 @@ from pysketcher._uniform_load import UniformLoad
 from pysketcher._velocity_profile import VelocityProfile
 from pysketcher._wall import Wall
 from pysketcher._wheel import Wheel
-from pysketcher.annotation import LineAnnotation, TextPosition
+from pysketcher.annotation import ArcAnnotation, LineAnnotation, TextPosition
 from pysketcher.composition import Composition, ShapeWithText
 from pysketcher.dimension import AngularDimension, LinearDimension, RadialDimension
 
@@ -47,7 +47,7 @@ __all__ = [
     "Axis",
     "Angle",
     "Arc",
-    "ArcWithText",
+    "ArcAnnotation",
     "Arrow",
     "DoubleArrow",
     "Circle",
