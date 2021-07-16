@@ -3,10 +3,8 @@
 import logging
 
 import numpy as np
-import pytest
 
 from pysketcher import (
-    Axis,
     Curve,
     Figure,
     Force,
@@ -23,8 +21,6 @@ from pysketcher.backend.matplotlib import MatplotlibBackend
 from pysketcher.composition import Composition
 
 logging.basicConfig(level=logging.INFO)
-
-pytest.importorskip("donottestme")
 
 
 def main() -> None:
@@ -50,7 +46,7 @@ def main() -> None:
 
     load = UniformLoad(A + Point(0, H), L, H)
     load.set_line_width(1).set_line_color(Style.Color.BLACK)
-    load_text = Text("$w$", load.geometric_features()["mid_top"] + Point(0, h / 2.0))
+    load_text = Text("$w$", load.mid_top + Point(0, h / 2.0))
 
     B = A + Point(a, 0)
     C = B + Point(b, 0)
@@ -67,16 +63,13 @@ def main() -> None:
     R2 = Force(
         "$R2$",
         B - Point(0, 2 * H),
-        support.geometric_features()["mid_support"],
-        spacing=0.3,
+        support.mid_support,
     )
     R2.set_line_width(3).set_line_color(Style.Color.BLACK)
     M1 = Moment(
         "$M_1$",
         center=A + Point(-H, H / 2),
         radius=H / 2,
-        left=True,
-        text_spacing=1 / 3.0,
     )
     M1.line_color = "black"
 
@@ -92,22 +85,12 @@ def main() -> None:
             "w": load,
             "w text": load_text,
             "A": Text("$A$", A + Point(0.7 * h, -0.9 * h)),
-            "B": Text(
-                "$B$", support.geometric_features()["mid_support"] - Point(1.25 * h, 0)
-            ),
+            "B": Text("$B$", support.mid_support - Point(1.25 * h, 0)),
             "C": Text("$C$", C + Point(h / 2, -h / 2)),
         }
     )
 
-    x_axis = Axis(A + Point(L + h, H / 2), 2 * H, "$x$").set_line_color(
-        Style.Color.BLACK
-    )
-    y_axis = Axis(
-        A + Point(0, H / 2), 3.5 * H, "$y$", rotation_angle=np.pi / 2
-    ).set_line_color(Style.Color.BLACK)
-    axes = Composition({"x axis": x_axis, "y axis": y_axis})
-
-    annotations = Composition({"dims": dims, "symbols": symbols, "axes": axes})
+    annotations = Composition({"dims": dims, "symbols": symbols})
     beam = Composition(
         {"beam": beam, "support": support, "clamped end": clamped, "load": load}
     )
