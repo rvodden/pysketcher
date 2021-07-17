@@ -39,7 +39,7 @@ from pysketcher._velocity_profile import VelocityProfile
 from pysketcher._wall import Wall
 from pysketcher._wheel import Wheel
 from pysketcher.annotation import ArcAnnotation, LineAnnotation, TextPosition
-from pysketcher.composition import Composition, ShapeWithText
+from pysketcher.composition import Composition
 from pysketcher.dimension import AngularDimension, LinearDimension, RadialDimension
 
 __all__ = [
@@ -53,7 +53,6 @@ __all__ = [
     "Circle",
     "CubicBezier",
     "Composition",
-    "ShapeWithText",
     "Curve",
     "Dashpot",
     "Drawable",

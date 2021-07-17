@@ -110,14 +110,14 @@ class AngularDimension(Composition):
                 self._start + extension_line1_vector * self._minor_offset,
                 self._start
                 + extension_line1_vector * (self._offset + self._minor_offset),
-                )
+            )
 
             extension_line2_vector = extension_line_vector(self._end, self._center)
             extension_lines["extension_line_2"] = Line(
                 self._end + extension_line2_vector * self._minor_offset,
                 self._end
                 + extension_line2_vector * (self._offset + self._minor_offset),
-                )
+            )
         return extension_lines
 
     @property
