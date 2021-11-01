@@ -162,3 +162,6 @@ dmypy.json
 /pysketcher/images/
 *.mp4
 !fig/*.mp4
+
+# pycharm
+.idea
