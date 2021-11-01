@@ -8,7 +8,7 @@ w_1 = 5  # position of front wheel
 
 
 # TODO : draw grids
-# drawing_tool.set_grid(True)
+
 def main() -> None:
     c = ps.Point(w_1, R)
 
