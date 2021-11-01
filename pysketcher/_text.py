@@ -5,18 +5,14 @@ from pysketcher._style import TextStyle
 
 
 class Text(Shape):
-    """Some text which appears on the drawing at the specified location.
+    """Place `text` on the drawing at the Point(x, y) `position`
 
-    Place `text` at the (x,y) point `position`, with the given
-    fontsize (0 indicates that the default fontsize set in drawing_tool
-    is to be used). The text is centered around `position` if `alignment` is
-    'center'; if 'left', the text starts at `position`, and if
-    'right', the right and of the text is located at `position`.
+    The `text` will be drawn in the given `direction`
 
     Args:
         text: The text to be displayed.
-        position: The position at which the text should be displayed.
-        direction: The direction in which the text should flow.
+        position: Point, The position the text will be displayed at.
+        direction: Point, The direction the text will flow to.
 
     Examples:
         >>> fig = ps.Figure(0.0, 4.0, 0.0, 4.0, MatplotlibBackend)
