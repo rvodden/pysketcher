@@ -1,5 +1,10 @@
 [build-system]
-requires = ["poetry_core>=1.0.0"]
+requires = [
+    "poetry_core>=1.0.7",
+    "nox>=2021.10.1",
+    "poetry==1.1.11",
+    "nox-poetry==0.8.6"
+    ]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
@@ -17,8 +22,6 @@ repository = "https://github.com/rvodden/pysketcher"
 homepage = "https://github.com/rvodden/pysketcher"
 keywords = ['sketch','graphics','scientific','engineering','geometry']
 
-[tool.poetry.extras]
-docs = ["sphinx"]
 
 [tool.poetry.dependencies]
 python = "^3.7"
@@ -27,6 +30,9 @@ matplotlib = "^3.2.1"
 scipy = "^1.6.0"
 importlib-metadata = {version = ">=2,<5", python = "<=3.7"}
 celluloid = "^0.2.0"
+sphinx = { version = "^4.1.1", optional=true }
+sphinx_rtd_theme = { version = "^0.5.0", optional=true }
+sphinx-autodoc-typehints = { version = "^1.11.1", optional=true }
 
 [tool.poetry.dev-dependencies]
 hypothesis = "^6.14.3"
@@ -37,10 +43,7 @@ coverage = "^5.3"
 mypy = "^0.910"
 pydocstyle = "^6.1.1"
 black = "^21.7b0"
-'zest.releaser' = { version = "^6.22.1", extras = ['recommended'] }
 wheel = "^0.35.1"
-sphinx = "^4.1.1"
-sphinx_rtd_theme = "^0.5.0"
 recommonmark = "^0.7.1"
 pytest-cov = "^2.11.1"
 nox = "^2021.6.12"
@@ -50,7 +53,6 @@ flake8-import-order = "^0.18.1"
 flake8-bandit = "^2.1.2"
 nox-poetry = "^0.8.4"
 flake8-docstrings = "^1.6.0"
-sphinx-autodoc-typehints = "^1.11.1"
 six = "^1.15.0"
 zipp = "^3.5.0"
 darglint = "^1.7.0"
@@ -60,6 +62,10 @@ safety = "^1.9.0"
 flake8-bugbear = "^21.3.2"
 typed-ast = "^1.4.1"
 codecov = "^2.1.10"
+'zest.releaser' = { version = "^6.22.2", extras = ['recommended'] }
+
+[tool.poetry.extras]
+docs = ["sphinx", "sphinx_rtd_theme", "sphinx-autodoc-typehints"]
 
 [tool.poetry.scripts]
 beam1 = "examples.beam1:main"
