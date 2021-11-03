@@ -13,14 +13,15 @@
 import os
 import sys
 
-import pysketcher
+sys.path.insert(0, os.path.abspath(".."))
+
+import pysketcher  # noqa: E402
 
 # The short X.Y version.
 version = ".".join(pysketcher.__version__.split(".", 2)[:2])
 # The full version, including alpha/beta/rc tags.
 release = pysketcher.__version__
 
-sys.path.insert(0, os.path.abspath(".."))
 
 # -- Project information -----------------------------------------------------
 
