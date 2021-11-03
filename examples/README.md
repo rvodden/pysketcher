@@ -1,1 +1,0 @@
-To properly run the examples on **pycharm** with the matplotlib backend, go to `modify run configurations` (right click the green arrow next to `if __name__ == "__main__":`), and select `run using python console`

@@ -163,5 +163,3 @@ dmypy.json
 *.mp4
 !fig/*.mp4
 
-# pycharm
-.idea
