@@ -29,21 +29,24 @@
 .. image:: https://badgen.net/github/dependabot/rvodden/pysketcher?icon=github
     :target: https://github.com/rvodden/pysketcher
 
-**This is alpha software - the interface is likely to change with every release prior to 0.1.0.**
+----
 
-PySketcher is a modern Python library designed to make creating geometric, mathematical and physical diagrams very
-easy.
+Please note: **pysketcher is in alpha stage:** the interface is likely to change from release to release.
 
-This library is continues the legacy of Hans Petter Langtangen. Work done since he sadly passed in 2016 includes:
+----
 
-1. The MatlibplotDraw object is no longer global and is no longer tightly coupled to the shape object. There is now a DrawingTool interface which this class implements.
+PySketcher makes creating precise, but simple **mechanics**, and **physics** diagrams
+easy. It is published on pypi, and uses of the tools provided by the ``matplotlib`` library.
+PySketcher is a modern Python library that makes creating precise, but simple **mechanics**, and **physics** diagrams
+easy. It is published on pypi, and uses of the tools provided by the ``matplotlib`` library.
 
-2. Code is organised into multiple files and published on pypi.
+PySketcher is built upon the `legacy <https://github.com/hplgit/pysketcher>`_ of *Hans Petter Langtangen* who sadly passed away in 2016.
+If you were familiar with his work, the current version includes the following changes:
 
-3. Shapes are immutable. This means functions such as ``rotate`` return modified copies of the original shape, rather than altering the shape on which they are called.
-
-4. Angles are in radians not degrees.
-
-5. The Composition object is used more consistently. Previously objects such as Beam were direct children of Shape which led to code repetition.
+#. The code is organised into multiple files.
+#. The ``MatlibplotDraw`` object is decoupled from the ``Shape`` object, and no longer global.
+#. ``Shape`` objects are immutable: a transformation returns a new ``Shape`` that is a transformed clone of the original.
+#. Angles are expressed in radians.
+#. The ``Composition`` object is used consistently to allow for assemblies of ``Shapes`` without code repetition.
 
 `Please see the documentation for more information <https://pysketcher.readthedocs.io/en/latest/index.html>`_.
