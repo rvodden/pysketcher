@@ -48,7 +48,6 @@ def main() -> None:
     )
 
     fig.add(beam)
-    # beam.draw_dimensions(drawing_tool)
     fig.show()
 
 
