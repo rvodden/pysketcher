@@ -11,9 +11,6 @@ W = 6.0
 logging.basicConfig(level=logging.INFO)
 
 
-# drawing_tool.set_grid(True)
-
-
 def main() -> None:
     L = 5 * H / 7  # length
     P = ps.Point(W / 6, 0.85 * H)  # rotation point
