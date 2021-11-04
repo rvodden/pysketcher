@@ -37,7 +37,7 @@ sphinx-autodoc-typehints = { version = "^1.11.1", optional=true }
 hypothesis = "^6.14.3"
 pytest = "^6.2.2"
 pylint = "^2.9.6"
-flake8 = "^3.9.0"
+flake8 = "^4.0.1"
 coverage = "^5.3"
 mypy = "^0.910"
 pydocstyle = "^6.1.1"
