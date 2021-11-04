@@ -11,7 +11,7 @@ nox.options.reuse_existing_virtualenvs = True
 locations = "pysketcher", "tests", "examples", "docs", "noxfile.py"
 
 main_version = ["3.8"]
-supported_versions = ["3.8", "3.9"]
+supported_versions = ["3.8", "3.9", "3.10"]
 
 
 @session(python=main_version)
