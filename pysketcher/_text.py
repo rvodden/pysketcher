@@ -5,7 +5,7 @@ from pysketcher._style import TextStyle
 
 
 class Text(Shape):
-    """Place `text` on the drawing at the Point(x, y) `position`
+    """Place `text` on the drawing at the Point(x, y) `position`.
 
     The `text` will be drawn in the given `direction`
 
