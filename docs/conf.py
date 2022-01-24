@@ -49,7 +49,7 @@ templates_path = ["_templates"]
 
 master_doc = "index"
 
-source_suffix = ".txt"
+source_suffix = ".rst"
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.

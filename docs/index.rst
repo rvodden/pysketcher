@@ -12,7 +12,7 @@ very little if any of his code remains. Significant deviations from his library 
 
 2. Code is organised into multiple files and published on pypi.
 
-3. Shapes are immutable. This means functions such as `rotate` return modified copies of the original shape, rather than altering the shape on which they are called.
+3. Shapes are immutable. This means functions such as ``rotate`` return modified copies of the original shape, rather than altering the shape on which they are called.
 
 4. Angles are in radians not degrees.
 
@@ -48,7 +48,7 @@ parameterized by variables (H, R, L, etc.):
 .. image:: docs/src/tut/fig-tut/vehicle0_dim.png
 
 One can then quickly change parameters, below to
-`R=0.5; L=5; H=2` and `R=2; L=7; H=1`, and get new figures that would be
+``R=0.5; L=5; H=2`` and ``R=2; L=7; H=1``, and get new figures that would be
 tedious to draw manually in an interactive tool.
 
 .. image:: docs/src/tut/fig-tut/vehicle_v23.png
@@ -71,7 +71,7 @@ other objects in the vehicle. `View animation`_] (the animation was created by
 Examples
 ========
 
-See the `examples` directory for some examples beyond the more basic
+See the ``examples`` directory for some examples beyond the more basic
 ones in the tutorial.
 For example, an elastic beam can be sketched as
 
