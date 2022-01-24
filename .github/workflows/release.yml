@@ -15,7 +15,7 @@ jobs:
         architecture: x64
     - run: pip install nox==2021.10.1
     - run: pip install nox-poetry==0.8.4
-    - run: pip install poetry==1.1.11
+    - run: pip install poetry==1.1.12
     - run: nox
     - run: poetry build
     - run: poetry publish --username=__token__ --password=${{ secrets.PYPI_TOKEN }}

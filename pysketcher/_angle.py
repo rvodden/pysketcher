@@ -19,7 +19,7 @@ class Angle(float):
         Angle(1.5707963267948966)
 
         >>> Angle(123)
-        Angle(-2.6637061435917175)
+        Angle(-2.6637061435917246)
 
         >>> Angle(2 * np.pi)
         Angle(0.0)
@@ -32,18 +32,11 @@ class Angle(float):
 
     @staticmethod
     def _normalize(value: float):
-        def order(x: float) -> float:
-            return np.trunc(x / (2 * np.pi))
-
-        if not (-np.pi < value <= np.pi):
-            order_value = order(value)
-            value = value - order_value * 2 * np.pi
-            # TODO: for some reason, ``order`` sometimes overshoots. Need to fix this.
-            while value <= -np.pi:
-                value = value + 2 * np.pi
-            while value > np.pi:
-                value = value - 2 * np.pi
-        return value
+        retval = value - 2 * np.pi * (np.ceil((value + np.pi) / (2 * np.pi)) - 1)
+        # TODO: this step should not be necessary - what is wrong with the above?
+        if not (-np.pi < retval <= np.pi):
+            retval = Angle._normalize(retval)
+        return retval
 
     def __add__(self, other: float) -> "Angle":
         """Returns the sum of this ``Angle`` with the provided ``Angle``."""
