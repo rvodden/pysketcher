@@ -30,6 +30,6 @@ jobs:
                   python-version: ${{ matrix.python-version }}
                   architecture: x64
             - run: pip install nox==2021.10.1
-            - run: pip install poetry==1.1.11
+            - run: pip install poetry==1.1.12
             - run: pip install nox-poetry==0.8.6
             - run: nox -s tests-${{ matrix.python-version }} examples-${{ matrix.python-version }}
