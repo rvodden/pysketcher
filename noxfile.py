@@ -7,7 +7,6 @@ from nox import Session
 from nox_poetry import session
 
 nox.options.sessions = "lint", "safety", "tests", "examples"
-nox.options.reuse_existing_virtualenvs = True
 locations = "pysketcher", "tests", "examples", "docs", "noxfile.py"
 
 main_version = ["3.8"]
