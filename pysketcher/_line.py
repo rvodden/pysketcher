@@ -1,6 +1,7 @@
 from copy import copy
 from typing import Tuple
 
+from pysketcher._angle import Angle
 from pysketcher._curve import Curve
 from pysketcher._point import Point
 
@@ -32,9 +33,6 @@ class Line(Curve):
     _a: float
     _b: float
     _c: float
-    _d: float
-    _vertical: bool
-    _horizontal: bool
 
     def __init__(self, start: Point, end: Point):
         if start == end:
@@ -43,27 +41,17 @@ class Line(Curve):
         self._end = end
         self._horizontal = False
         self._vertical = False
-        self._a = self._b = self._c = self._d = None
+        self._a = self._b = self._c = None
         super().__init__([self._start, self._end])
         self._compute_formulas()
 
     def _compute_formulas(self):
-        # Define equations for line:
-        # y = a*x + b,  x = c*y + d
-        try:
-            self._a = (self._end.y - self._start.y) / (self._end.x - self._start.x)
-            self._b = self._start.y - self._a * self._start.x
-        except ZeroDivisionError:
-            self._vertical = True
-            self._c = 0.0
-            self._d = self._end.x
-            return
+        # Define equation for line:
+        # a * x + b * y + c = 0
 
-        try:
-            self._c = 1.0 / self._a
-            self._d = self._b / self._a
-        except ZeroDivisionError:
-            self._horizontal = True
+        self._a = self._start.y - self._end.y
+        self._b = self._end.x - self._start.x
+        self._c = self._start.x * self._end.y - self._start.y * self._end.x
 
     @property
     def start(self) -> Point:
@@ -90,11 +78,15 @@ class Line(Curve):
                 the line is vertical and x is provided.
         """
         self._compute_formulas()
-        if self._horizontal and y:
+        if self._b == 0 and y:
             raise ValueError("Value of x is not dependent on the value of y.")
-        if self._vertical and x:
+        if self._a == 0 and x:
             raise ValueError("Value of y is not dependent on the value of x.")
-        return self._a * x + self._b if x else self._c * y + self._d
+        return (
+            -(self._a * x + self._c) / self._b
+            if x
+            else -(self._b * y + self._c) / self._a
+        )
 
     def interval(
         self, x_range: Tuple[float, float] = None, y_range: Tuple[float, float] = None
@@ -125,7 +117,7 @@ class Line(Curve):
                 Point(self(y_range[0]), y_range[0]), Point(self(y_range[1]), y_range[1])
             )
 
-    def rotate(self, angle: float, center: Point) -> "Line":
+    def rotate(self, angle: Angle, center: Point) -> "Line":
         """Rotate the line through an angle about a point.
 
         Args:
