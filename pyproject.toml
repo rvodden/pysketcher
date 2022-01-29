@@ -29,6 +29,7 @@ numpy = "^1.19.5"
 matplotlib = "^3.2.1"
 scipy = "^1.7.3"
 celluloid = "^0.2.0"
+lxml = "^4.7.1"
 sphinx = { version = "^4.1.1", optional=true }
 sphinx_rtd_theme = { version = ">=0.5,<1.1", optional=true }
 sphinx-autodoc-typehints = { version = "^1.11.1", optional=true }

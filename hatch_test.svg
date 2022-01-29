@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="20.0cm" height="3.0cm" viewBox="0.0 0.0 708.6 106.28999999999999">
+ <g>
+  <g>
+   <rect x="1.0cm" y="1.0cm" width="1cm" height="1cm" stroke-width="1px" stroke="Black" fill="url(#vertical)"/>
+   <rect x="2.5cm" y="1.0cm" width="1cm" height="1cm" stroke-width="1px" stroke="Black" fill="url(#horizontal)"/>
+   <rect x="4.0cm" y="1.0cm" width="1cm" height="1cm" stroke-width="1px" stroke="Black" fill="url(#cross)"/>
+   <rect x="5.5cm" y="1.0cm" width="1cm" height="1cm" stroke-width="1px" stroke="Black" fill="url(#square)"/>
+   <rect x="7.0cm" y="1.0cm" width="1cm" height="1cm" stroke-width="1px" stroke="Black" fill="url(#star)"/>
+   <rect x="8.5cm" y="1.0cm" width="1cm" height="1cm" stroke-width="1px" stroke="Black" fill="url(#dot)"/>
+   <rect x="10.0cm" y="1.0cm" width="1cm" height="1cm" stroke-width="1px" stroke="Black" fill="url(#circle)"/>
+   <rect x="11.5cm" y="1.0cm" width="1cm" height="1cm" stroke-width="1px" stroke="Black" fill="url(#smallCircle)"/>
+   <rect x="13.0cm" y="1.0cm" width="1cm" height="1cm" stroke-width="1px" stroke="Black" fill="url(#upRightToLeft)"/>
+   <rect x="14.5cm" y="1.0cm" width="1cm" height="1cm" stroke-width="1px" stroke="Black" fill="url(#upLeftToRight)"/>
+  </g>
+ </g>
+ <defs>
+  <pattern id="vertical" patternUnits="userSpaceOnUse" width="3.5mm" height="3.5mm">
+   <line x1="1.75mm" y1="0mm" x2="1.75mm" y2="3.5mm" stroke="black" stroke-width=".25"/>
+  </pattern>
+  <pattern id="horizontal" patternUnits="userSpaceOnUse" width="3.5mm" height="3.5mm">
+   <line x1="0mm" y1="1.75mm" x2="3.5mm" y2="1.75mm" stroke="black" stroke-width=".25"/>
+  </pattern>
+  <pattern id="cross" patternUnits="userSpaceOnUse" width="3.5mm" height="3.5mm">
+   <line x1="0mm" y1="0mm" x2="3.5mm" y2="3.5mm" stroke="black" stroke-width=".25"/>
+   <line x1="3.5mm" y1="0mm" x2="0mm" y2="3.5mm" stroke="black" stroke-width=".25"/>
+  </pattern>
+  <pattern id="square" patternUnits="userSpaceOnUse" width="3.5mm" height="3.5mm">
+   <line x1="0mm" y1="1.75mm" x2="3.5mm" y2="1.75mm" stroke="black" stroke-width=".25"/>
+   <line x1="1.75mm" y1="0mm" x2="1.75mm" y2="3.5mm" stroke="black" stroke-width=".25"/>
+  </pattern>
+  <pattern id="star" patternUnits="userSpaceOnUse" width="3.5mm" height="3.5mm" viewBox="0 0 260 260">
+   <path d="m56,237 74,-228 74,228L10,96h240"/>
+  </pattern>
+  <pattern id="dot" patternUnits="userSpaceOnUse" width="3.5mm" height="7mm">
+   <circle cx="1.75mm" cy="1.75mm" r="0.5mm" fill="black"/>
+   <circle cx="0mm" cy="5.25mm" r="0.5mm" fill="black"/>
+   <circle cx="3.5mm" cy="5.25mm" r="0.5mm" fill="black"/>
+  </pattern>
+  <pattern id="circle" patternUnits="userSpaceOnUse" width="3.5mm" height="7mm">
+   <circle cx="1.75mm" cy="1.75mm" r="1.5mm" stroke="black" stroke-width="0.5" fill="none"/>
+   <circle cx="0mm" cy="5.25mm" r="1.5mm" stroke="black" stroke-width="0.5" fill="none"/>
+   <circle cx="3.5mm" cy="5.25mm" r="1.5mm" stroke="black" stroke-width="0.5" fill="none"/>
+  </pattern>
+  <pattern id="smallCircle" patternUnits="userSpaceOnUse" width="3.5mm" height="7mm">
+   <circle cx="1.75mm" cy="1.75mm" r="0.75mm" stroke="black" stroke-width="0.5" fill="none"/>
+   <circle cx="0mm" cy="5.25mm" r="0.75mm" stroke="black" stroke-width="0.5" fill="none"/>
+   <circle cx="3.5mm" cy="5.25mm" r="0.75mm" stroke="black" stroke-width="0.5" fill="none"/>
+  </pattern>
+  <pattern id="upRightToLeft" patternUnits="userSpaceOnUse" width="3.5mm" height="3.5mm">
+   <line x1="0mm" y1="0mm" x2="4mm" y2="4mm" stroke="black" stroke-width=".25"/>
+  </pattern>
+  <pattern id="upLeftToRight" patternUnits="userSpaceOnUse" width="3.5mm" height="3.5mm">
+   <line x1="0mm" y1="3.5mm" x2="3.5mm" y2="0mm" stroke="black" stroke-width=".25"/>
+  </pattern>
+ </defs>
+</svg>

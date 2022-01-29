@@ -16,10 +16,6 @@ from pysketcher.backend.matplotlib._matplotlib_text import MatplotlibText
 from pysketcher.composition import Composition
 
 
-# plt.rc("text", usetex=True)
-# plt.rcParams["text.latex.preamble"] = r"\usepackage{amsmath}"
-
-
 class MatplotlibBackend(Backend):
     """Simple interface for plotting. Makes use of Matplotlib for plotting."""
 
