@@ -34,7 +34,7 @@ sphinx_rtd_theme = { version = ">=0.5,<1.1", optional=true }
 sphinx-autodoc-typehints = { version = "^1.11.1", optional=true }
 
 [tool.poetry.dev-dependencies]
-hypothesis = "^6.46.2"
+hypothesis = "^6.46.3"
 pytest = "^7.1.0"
 pylint = "^2.12.2"
 flake8 = "^4.0.1"
@@ -60,7 +60,7 @@ blackdoc = "^0.3"
 commitizen = "^2.25.0"
 safety = "^1.9.0"
 flake8-bugbear = "^22.1.11"
-typed-ast = "^1.4.1"
+typed-ast = "^1.5.3"
 codecov = "^2.1.10"
 'zest.releaser' = { version = "^6.22.2", extras = ['recommended'] }
 
