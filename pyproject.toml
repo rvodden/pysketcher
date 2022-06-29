@@ -34,7 +34,7 @@ sphinx_rtd_theme = { version = ">=0.5,<1.1", optional=true }
 sphinx-autodoc-typehints = { version = "^1.11.1", optional=true }
 
 [tool.poetry.dev-dependencies]
-hypothesis = "^6.46.5"
+hypothesis = "^6.48.1"
 pytest = "^7.1.0"
 pylint = "^2.13.9"
 flake8 = "^4.0.1"
@@ -51,7 +51,7 @@ pre-commit = "^2.19.0"
 flake8-black = "^0.3.2"
 flake8-import-order = "^0.18.1"
 flake8-bandit = "^3.0.0"
-nox-poetry = "^0.9.0"
+nox-poetry = "^1.0.1"
 flake8-docstrings = "^1.6.0"
 six = "^1.15.0"
 zipp = "^3.5.0"
