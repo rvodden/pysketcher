@@ -34,7 +34,7 @@ sphinx_rtd_theme = { version = ">=0.5,<1.1", optional=true }
 sphinx-autodoc-typehints = { version = "^1.11.1", optional=true }
 
 [tool.poetry.dev-dependencies]
-hypothesis = "^6.46.5"
+hypothesis = "^6.48.2"
 pytest = "^7.1.0"
 pylint = "^2.13.9"
 flake8 = "^4.0.1"
