@@ -300,14 +300,14 @@ test = ["flake8 (==3.7.8)", "hypothesis (==3.55.3)"]
 
 [[package]]
 name = "coverage"
-version = "6.3.3"
+version = "6.4.1"
 description = "Code coverage measurement for Python"
 category = "dev"
 optional = false
 python-versions = ">=3.7"
 
 [package.dependencies]
-tomli = {version = "*", optional = true, markers = "extra == \"toml\""}
+tomli = {version = "*", optional = true, markers = "python_full_version <= \"3.11.0a6\" and extra == \"toml\""}
 
 [package.extras]
 toml = ["tomli"]
@@ -1602,7 +1602,7 @@ docs = ["sphinx", "sphinx_rtd_theme", "sphinx-autodoc-typehints"]
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.8,<3.11"
-content-hash = "006583561678dfbf084b6a6307fab0ca59ad39bab565d9384906351c3270e033"
+content-hash = "2bd07a9565d70c939533341dde1614bd16df1b07d9829064e60e974de64fe12f"
 
 [metadata.files]
 alabaster = []
