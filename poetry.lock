@@ -752,7 +752,7 @@ python-versions = ">=3.5"
 
 [[package]]
 name = "mypy"
-version = "0.941"
+version = "0.961"
 description = "Optional static typing for Python"
 category = "dev"
 optional = false
@@ -760,7 +760,7 @@ python-versions = ">=3.6"
 
 [package.dependencies]
 mypy-extensions = ">=0.4.3"
-tomli = ">=1.1.0"
+tomli = {version = ">=1.1.0", markers = "python_version < \"3.11\""}
 typing-extensions = ">=3.10"
 
 [package.extras]
@@ -1602,7 +1602,7 @@ docs = ["sphinx", "sphinx_rtd_theme", "sphinx-autodoc-typehints"]
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.8,<3.11"
-content-hash = "235c5d56b5d024311dd307ea5700aecbd76a1e1314e5e08ee31dc310a8b6b758"
+content-hash = "f5cd9a9d764a7e924c7e762e5088e7a4d963d6770d1d60b33134ea717d0ffcfc"
 
 [metadata.files]
 alabaster = []
