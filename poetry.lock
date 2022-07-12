@@ -1493,7 +1493,7 @@ tqdm = ">=4.14"
 
 [[package]]
 name = "typed-ast"
-version = "1.5.3"
+version = "1.5.4"
 description = "a fork of Python 2 and 3 ast modules with type comment support"
 category = "dev"
 optional = false
@@ -1602,7 +1602,7 @@ docs = ["sphinx", "sphinx_rtd_theme", "sphinx-autodoc-typehints"]
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.8,<3.11"
-content-hash = "7ede000e99c64c30e4db57b2931f85876220b1d1449ef259c23cb7a6bf6abae8"
+content-hash = "fc453301a064fb536ec593053202560e569d425e5bdb7cfd9259cb8ed521b5ad"
 
 [metadata.files]
 alabaster = []
