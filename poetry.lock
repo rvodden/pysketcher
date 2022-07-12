@@ -1032,7 +1032,7 @@ requests = "*"
 
 [[package]]
 name = "pytest"
-version = "7.1.0"
+version = "7.1.2"
 description = "pytest: simple powerful testing with Python"
 category = "dev"
 optional = false
@@ -1602,7 +1602,7 @@ docs = ["sphinx", "sphinx_rtd_theme", "sphinx-autodoc-typehints"]
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.8,<3.11"
-content-hash = "7a5262b9724c9c926ed7abf0079061782a1cd9f768a5d166b74722286952a9d9"
+content-hash = "7ede000e99c64c30e4db57b2931f85876220b1d1449ef259c23cb7a6bf6abae8"
 
 [metadata.files]
 alabaster = []
