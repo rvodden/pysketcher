@@ -84,7 +84,7 @@ yaml = ["pyyaml"]
 
 [[package]]
 name = "black"
-version = "22.1.0"
+version = "22.6.0"
 description = "The uncompromising code formatter."
 category = "dev"
 optional = false
@@ -95,7 +95,7 @@ click = ">=8.0.0"
 mypy-extensions = ">=0.4.3"
 pathspec = ">=0.9.0"
 platformdirs = ">=2"
-tomli = ">=1.1.0"
+tomli = {version = ">=1.1.0", markers = "python_full_version < \"3.11.0a7\""}
 typing-extensions = {version = ">=3.10.0.0", markers = "python_version < \"3.10\""}
 
 [package.extras]
@@ -1602,7 +1602,7 @@ docs = ["sphinx", "sphinx_rtd_theme", "sphinx-autodoc-typehints"]
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.8,<3.11"
-content-hash = "efbc6bee66dfdf906958c79443c1e6155a977f4237f4030bdd50bc9667236237"
+content-hash = "7a5262b9724c9c926ed7abf0079061782a1cd9f768a5d166b74722286952a9d9"
 
 [metadata.files]
 alabaster = []
