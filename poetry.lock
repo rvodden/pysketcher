@@ -106,7 +106,7 @@ uvloop = ["uvloop (>=0.15.2)"]
 
 [[package]]
 name = "blackdoc"
-version = "0.3.4"
+version = "0.3.5"
 description = "run black on documentation code snippets"
 category = "dev"
 optional = false
@@ -115,7 +115,8 @@ python-versions = ">=3.6"
 [package.dependencies]
 black = "*"
 more-itertools = "*"
-toml = "*"
+pathspec = "*"
+tomli = "*"
 
 [[package]]
 name = "bleach"
@@ -145,10 +146,10 @@ pep517 = ">=0.9.1"
 tomli = ">=1.0.0"
 
 [package.extras]
-docs = ["furo (>=2020.11.19b18)", "sphinx (>=3.0,<4.0)", "sphinx-argparse-cli (>=1.5)", "sphinx-autodoc-typehints (>=1.10)"]
-test = ["filelock (>=3)", "pytest (>=6.2.4)", "pytest-cov (>=2)", "pytest-mock (>=2)", "pytest-rerunfailures (>=9.1)", "pytest-xdist (>=1.34)", "setuptools (>=42.0.0)", "toml (>=0.10.0)", "wheel (>=0.36.0)"]
-typing = ["importlib-metadata (>=4.6.4)", "mypy (==0.910)", "typing-extensions (>=3.7.4.3)"]
 virtualenv = ["virtualenv (>=20.0.35)"]
+typing = ["typing-extensions (>=3.7.4.3)", "mypy (==0.910)", "importlib-metadata (>=4.6.4)"]
+test = ["wheel (>=0.36.0)", "toml (>=0.10.0)", "setuptools (>=42.0.0)", "pytest-xdist (>=1.34)", "pytest-rerunfailures (>=9.1)", "pytest-mock (>=2)", "pytest-cov (>=2)", "pytest (>=6.2.4)", "filelock (>=3)"]
+docs = ["sphinx-autodoc-typehints (>=1.10)", "sphinx-argparse-cli (>=1.5)", "sphinx (>=3.0,<4.0)", "furo (>=2020.11.19b18)"]
 
 [[package]]
 name = "celluloid"
@@ -296,7 +297,7 @@ optional = false
 python-versions = "*"
 
 [package.extras]
-test = ["flake8 (==3.7.8)", "hypothesis (==3.55.3)"]
+test = ["hypothesis (==3.55.3)", "flake8 (==3.7.8)"]
 
 [[package]]
 name = "coverage"
@@ -1366,7 +1367,7 @@ docutils = "<0.18"
 sphinx = ">=1.6"
 
 [package.extras]
-dev = ["transifex-client", "sphinxcontrib-httpdomain", "bump2version"]
+dev = ["bump2version", "sphinxcontrib-httpdomain", "transifex-client"]
 
 [[package]]
 name = "sphinxcontrib-applehelp"
@@ -1377,8 +1378,8 @@ optional = false
 python-versions = ">=3.5"
 
 [package.extras]
-lint = ["flake8", "mypy", "docutils-stubs"]
 test = ["pytest"]
+lint = ["docutils-stubs", "mypy", "flake8"]
 
 [[package]]
 name = "sphinxcontrib-devhelp"
@@ -1389,8 +1390,8 @@ optional = false
 python-versions = ">=3.5"
 
 [package.extras]
-lint = ["flake8", "mypy", "docutils-stubs"]
 test = ["pytest"]
+lint = ["docutils-stubs", "mypy", "flake8"]
 
 [[package]]
 name = "sphinxcontrib-htmlhelp"
@@ -1401,8 +1402,8 @@ optional = false
 python-versions = ">=3.6"
 
 [package.extras]
-lint = ["flake8", "mypy", "docutils-stubs"]
-test = ["pytest", "html5lib"]
+test = ["html5lib", "pytest"]
+lint = ["docutils-stubs", "mypy", "flake8"]
 
 [[package]]
 name = "sphinxcontrib-jsmath"
@@ -1413,7 +1414,7 @@ optional = false
 python-versions = ">=3.5"
 
 [package.extras]
-test = ["pytest", "flake8", "mypy"]
+test = ["mypy", "flake8", "pytest"]
 
 [[package]]
 name = "sphinxcontrib-qthelp"
@@ -1424,8 +1425,8 @@ optional = false
 python-versions = ">=3.5"
 
 [package.extras]
-lint = ["flake8", "mypy", "docutils-stubs"]
 test = ["pytest"]
+lint = ["docutils-stubs", "mypy", "flake8"]
 
 [[package]]
 name = "sphinxcontrib-serializinghtml"
@@ -1685,8 +1686,8 @@ black = [
     {file = "black-22.6.0.tar.gz", hash = "sha256:6c6d39e28aed379aec40da1c65434c77d75e65bb59a1e1c283de545fb4e7c6c9"},
 ]
 blackdoc = [
-    {file = "blackdoc-0.3.4-py3-none-any.whl", hash = "sha256:4b6567c1e31dd9f13d684325e40c9f2decf30c0b8f76eeec2c4b71f91e3cdaf2"},
-    {file = "blackdoc-0.3.4.tar.gz", hash = "sha256:8d416b541d378b431173874d0011a259efaed63580e92817f95c47e3b20d057f"},
+    {file = "blackdoc-0.3.5-py3-none-any.whl", hash = "sha256:8fee2c3fde8da2b2224f054a0d5b10215a15a90c43943be397bdc11315e1be8a"},
+    {file = "blackdoc-0.3.5.tar.gz", hash = "sha256:7958065881412dc243fe809f8fa249fbb8a6731ae5f587c976ce803eaf886ac9"},
 ]
 bleach = [
     {file = "bleach-4.1.0-py2.py3-none-any.whl", hash = "sha256:4d2651ab93271d1129ac9cbc679f524565cc8a1b791909c4a51eac4446a15994"},
