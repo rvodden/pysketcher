@@ -36,7 +36,7 @@ sphinx-autodoc-typehints = { version = "^1.11.1", optional=true }
 [tool.poetry.dev-dependencies]
 hypothesis = "^6.54.4"
 pytest = "^7.1.2"
-pylint = "^2.14.5"
+pylint = "^2.15.0"
 flake8 = "^5.0.4"
 coverage = "^6.4"
 mypy = "^0.971"
