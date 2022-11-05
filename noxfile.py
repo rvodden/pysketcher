@@ -9,8 +9,8 @@ from nox_poetry import session
 nox.options.sessions = "lint", "safety", "tests", "examples"
 locations = "pysketcher", "tests", "examples", "docs", "noxfile.py"
 
-main_version = ["3.8"]
-supported_versions = ["3.8", "3.9", "3.10"]
+main_version = ["3.9"]
+supported_versions = ["3.9", "3.10", "3.11"]
 
 
 @session(python=main_version)

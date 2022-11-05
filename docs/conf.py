@@ -25,9 +25,9 @@ release = pysketcher.__version__
 
 # -- Project information -----------------------------------------------------
 
-project = u"PySketcher"
-copyright = u"2020, Richard Vodden"
-author = u"Richard Vodden"
+project = "PySketcher"
+copyright = "2020, Richard Vodden"
+author = "Richard Vodden"
 
 # -- General configuration ---------------------------------------------------
 

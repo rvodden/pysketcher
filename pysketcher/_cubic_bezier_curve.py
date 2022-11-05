@@ -57,8 +57,8 @@ class CubicBezier(Curve):
             return (
                 (1 - t) ** 3 * a[0]
                 + (1 - t) ** 2 * 3 * t * a[1]
-                + (1 - t) * 3 * t ** 2 * a[2]
-                + t ** 3 * a[3]
+                + (1 - t) * 3 * t**2 * a[2]
+                + t**3 * a[3]
             )
 
         def _segment_function(t: float) -> Point:
