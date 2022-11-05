@@ -104,7 +104,7 @@ def main():
 
     def position(t):
         """Position of center point of wheel."""
-        return c + tangent_vec * 7 * t ** 2
+        return c + tangent_vec * 7 * t**2
 
     def move(fig: Shape, t: float, dt: float = None) -> fig:
         x = position(t)

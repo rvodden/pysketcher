@@ -16,11 +16,11 @@ alpha = 2
 
 # Create bottom
 def gaussian(x: float) -> float:
-    return alpha * np.exp(-((x - W) ** 2) / (0.5 * sigma ** 2))
+    return alpha * np.exp(-((x - W) ** 2) / (0.5 * sigma**2))
 
 
 def velocity_profile(y: float) -> ps.Point:
-    return ps.Point(2 * y * (2 * H - y) / H ** 2, 0)
+    return ps.Point(2 * y * (2 * H - y) / H**2, 0)
 
 
 def main() -> None:
