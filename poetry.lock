@@ -98,16 +98,17 @@ uvloop = ["uvloop (>=0.15.2)"]
 
 [[package]]
 name = "blackdoc"
-version = "0.3.7"
+version = "0.3.8"
 description = "run black on documentation code snippets"
 category = "dev"
 optional = false
-python-versions = ">=3.6"
+python-versions = ">=3.7"
 
 [package.dependencies]
 black = "*"
 more-itertools = "*"
 pathspec = "*"
+rich = "*"
 tomli = "*"
 
 [[package]]
@@ -1203,6 +1204,22 @@ python-versions = ">=3.7"
 idna2008 = ["idna"]
 
 [[package]]
+name = "rich"
+version = "12.6.0"
+description = "Render rich text, tables, progress bars, syntax highlighting, markdown and more to the terminal"
+category = "dev"
+optional = false
+python-versions = ">=3.6.3,<4.0.0"
+
+[package.dependencies]
+commonmark = ">=0.9.0,<0.10.0"
+pygments = ">=2.6.0,<3.0.0"
+typing-extensions = {version = ">=4.0.0,<5.0", markers = "python_version < \"3.9\""}
+
+[package.extras]
+jupyter = ["ipywidgets (>=7.5.1,<8.0.0)"]
+
+[[package]]
 name = "ruamel.yaml"
 version = "0.17.21"
 description = "ruamel.yaml is a YAML parser/emitter that supports roundtrip preservation of comments, seq/map flow style, and map key order"
@@ -1722,8 +1739,8 @@ black = [
     {file = "black-22.10.0.tar.gz", hash = "sha256:f513588da599943e0cde4e32cc9879e825d58720d6557062d1098c5ad80080e1"},
 ]
 blackdoc = [
-    {file = "blackdoc-0.3.7-py3-none-any.whl", hash = "sha256:b4a028fbb2a48e8a3c577d9bbe9c40adf67950c45db9bcd5902bcde5c37cd865"},
-    {file = "blackdoc-0.3.7.tar.gz", hash = "sha256:0b2e3f2f5611112532c85647a39cdc6e7ced660530e942331aa971c49c71deae"},
+    {file = "blackdoc-0.3.8-py3-none-any.whl", hash = "sha256:c003a1b72d57692b343815c8b7a15e78977caba96c86060def892602b5aba083"},
+    {file = "blackdoc-0.3.8.tar.gz", hash = "sha256:3c9d5534f92557a627a31550c7faec8363b5b0929bbb0ca3f5df179a81a9d6b2"},
 ]
 bleach = [
     {file = "bleach-4.1.0-py2.py3-none-any.whl", hash = "sha256:4d2651ab93271d1129ac9cbc679f524565cc8a1b791909c4a51eac4446a15994"},
@@ -2567,6 +2584,10 @@ requests-toolbelt = [
 rfc3986 = [
     {file = "rfc3986-2.0.0-py2.py3-none-any.whl", hash = "sha256:50b1502b60e289cb37883f3dfd34532b8873c7de9f49bb546641ce9cbd256ebd"},
     {file = "rfc3986-2.0.0.tar.gz", hash = "sha256:97aacf9dbd4bfd829baad6e6309fa6573aaf1be3f6fa735c8ab05e46cecb261c"},
+]
+rich = [
+    {file = "rich-12.6.0-py3-none-any.whl", hash = "sha256:a4eb26484f2c82589bd9a17c73d32a010b1e29d89f1604cd9bf3a2097b81bb5e"},
+    {file = "rich-12.6.0.tar.gz", hash = "sha256:ba3a3775974105c221d31141f2c116f4fd65c5ceb0698657a11e9f295ec93fd0"},
 ]
 "ruamel.yaml" = [
     {file = "ruamel.yaml-0.17.21-py3-none-any.whl", hash = "sha256:742b35d3d665023981bd6d16b3d24248ce5df75fdb4e2924e93a05c1f8b61ca7"},
