@@ -800,7 +800,7 @@ tox-to-nox = ["jinja2", "tox"]
 
 [[package]]
 name = "nox-poetry"
-version = "1.0.1"
+version = "1.0.2"
 description = "nox-poetry"
 category = "dev"
 optional = false
@@ -1689,7 +1689,7 @@ docs = ["sphinx", "sphinx_rtd_theme", "sphinx-autodoc-typehints"]
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.8,<3.11"
-content-hash = "86e87f65387022083dd7a2e5dd044faeb9a869635bc90deb3693dcdf5a96f302"
+content-hash = "fdc520b6a7a954242f5e29e48f5b4bc459d9e276b759787fa302e306820caf79"
 
 [metadata.files]
 alabaster = [
@@ -2356,8 +2356,8 @@ nox = [
     {file = "nox-2022.8.7.tar.gz", hash = "sha256:1b894940551dc5c389f9271d197ca5d655d40bdc6ccf93ed6880e4042760a34b"},
 ]
 nox-poetry = [
-    {file = "nox-poetry-1.0.1.tar.gz", hash = "sha256:8a1b96f2d321e91917f0aa770adb6079f3f3dc8cf01447944977cb78ccafda15"},
-    {file = "nox_poetry-1.0.1-py3-none-any.whl", hash = "sha256:6ed30e33b782cecba081dbb79626f60c3acf517c535b89ef8699071fd70567cd"},
+    {file = "nox-poetry-1.0.2.tar.gz", hash = "sha256:22bc397979393a0283f5161af708a3a430e1c7e0cc2be274c7b27e9e46de0412"},
+    {file = "nox_poetry-1.0.2-py3-none-any.whl", hash = "sha256:a53c36eccbd67f15b5b83dd6562d077dd326c71fd4a942528d8b2299c417dbbe"},
 ]
 numpy = [
     {file = "numpy-1.23.4-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:95d79ada05005f6f4f337d3bb9de8a7774f259341c70bc88047a1f7b96a4bcb2"},
