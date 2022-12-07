@@ -59,7 +59,7 @@ darglint = "^1.7.0"
 blackdoc = "^0.3"
 commitizen = "^2.37.1"
 safety = "^2.3.3"
-flake8-bugbear = "^22.10.27"
+flake8-bugbear = "^22.12.6"
 typed-ast = "^1.5.4"
 codecov = "^2.1.10"
 'zest.releaser' = { version = "^7.0.0", extras = ['recommended'] }
