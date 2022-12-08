@@ -1243,7 +1243,7 @@ python-versions = ">=3.5"
 
 [[package]]
 name = "safety"
-version = "2.3.3"
+version = "2.3.4"
 description = "Checks installed dependencies for known vulnerabilities and licenses."
 category = "dev"
 optional = false
@@ -1687,7 +1687,7 @@ docs = ["sphinx", "sphinx_rtd_theme", "sphinx-autodoc-typehints"]
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.8,<3.11"
-content-hash = "5fb440efd25068f74c0f645b41057700e342a8c9aae2fea6525d247fddae106b"
+content-hash = "e4b62a5b98197f50b97071e5256bfc4603819cdc4fac9bf3af702f50d6e5e283"
 
 [metadata.files]
 alabaster = [
@@ -2653,8 +2653,8 @@ rich = [
     {file = "ruamel.yaml.clib-0.2.6.tar.gz", hash = "sha256:4ff604ce439abb20794f05613c374759ce10e3595d1867764dd1ae675b85acbd"},
 ]
 safety = [
-    {file = "safety-2.3.3-py3-none-any.whl", hash = "sha256:c12b2aaf3495faf42951fdd91d3c5ce6ecffd05efa423a29244408b72c556744"},
-    {file = "safety-2.3.3.tar.gz", hash = "sha256:2e17cf127472ca720cdcc65f834008b555a10fe56627646009ab7565dd2459cf"},
+    {file = "safety-2.3.4-py3-none-any.whl", hash = "sha256:6224dcd9b20986a2b2c5e7acfdfba6bca42bb11b2783b24ed04f32317e5167ea"},
+    {file = "safety-2.3.4.tar.gz", hash = "sha256:b9e74e794e82f54d11f4091c5d820c4d2d81de9f953bf0b4f33ac8bc402ae72c"},
 ]
 scipy = [
     {file = "scipy-1.9.3-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:1884b66a54887e21addf9c16fb588720a8309a57b2e258ae1c7986d4444d3bc0"},
