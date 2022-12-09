@@ -62,7 +62,7 @@ safety = "^2.3.5"
 flake8-bugbear = "^22.12.6"
 typed-ast = "^1.5.4"
 codecov = "^2.1.10"
-'zest.releaser' = { version = "^7.0.0", extras = ['recommended'] }
+'zest.releaser' = { version = "^7.1.0", extras = ['recommended'] }
 
 [tool.poetry.extras]
 docs = ["sphinx", "sphinx_rtd_theme", "sphinx-autodoc-typehints"]
