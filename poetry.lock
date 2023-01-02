@@ -1646,8 +1646,8 @@ optional = false
 python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,>=2.7"
 
 [[package]]
-name = "zest.releaser"
-version = "7.0.0"
+name = "zest-releaser"
+version = "7.2.0"
 description = "Software releasing made easy and repeatable"
 category = "dev"
 optional = false
@@ -1666,7 +1666,7 @@ wheel = {version = "*", optional = true, markers = "extra == \"recommended\""}
 
 [package.extras]
 recommended = ["check-manifest", "pep440", "pyroma", "readme-renderer", "wheel"]
-test = ["wheel", "z3c.testsetup (>=0.8.4)", "zope.testing", "zope.testrunner"]
+test = ["wheel", "zope.testing", "zope.testrunner"]
 
 [[package]]
 name = "zipp"
@@ -1686,7 +1686,7 @@ docs = ["sphinx", "sphinx_rtd_theme", "sphinx-autodoc-typehints"]
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.8,<3.11"
-content-hash = "515677b0a1a3824d57dcd997cc52521d9d79da85c56c4533002e33bc8664840f"
+content-hash = "72d06ff332face9cb8fa34fbf21edcc3b8b72eebc048a2fbab9c0a754932160f"
 
 [metadata.files]
 alabaster = [
@@ -2864,9 +2864,9 @@ wrapt = [
     {file = "wrapt-1.13.3-cp39-cp39-win_amd64.whl", hash = "sha256:81bd7c90d28a4b2e1df135bfbd7c23aee3050078ca6441bead44c42483f9ebfb"},
     {file = "wrapt-1.13.3.tar.gz", hash = "sha256:1fea9cd438686e6682271d36f3481a9f3636195578bab9ca3382e2f5f01fc185"},
 ]
-"zest.releaser" = [
-    {file = "zest.releaser-7.0.0-py3-none-any.whl", hash = "sha256:ecf46536a89f7b96fe66c58a0b0480f0fe8cd64377175378f6ef07e0ee013cc6"},
-    {file = "zest.releaser-7.0.0.tar.gz", hash = "sha256:ada1448ff3b7fc9e993790a0e85067413c9b759a273e176d3978ee888fed7d34"},
+zest-releaser = [
+    {file = "zest.releaser-7.2.0-py3-none-any.whl", hash = "sha256:bb11f6d85af7cd62eabc2713d2fa314d981187a955faab52c1178b763dbcbcc9"},
+    {file = "zest.releaser-7.2.0.tar.gz", hash = "sha256:82eed1d5e25793037524ce76de5b72306ca056afe269dac3d2a042d9ba9ebef5"},
 ]
 zipp = [
     {file = "zipp-3.11.0-py3-none-any.whl", hash = "sha256:83a28fcb75844b5c0cdaf5aa4003c2d728c77e05f5aeabe8e95e56727005fbaa"},
