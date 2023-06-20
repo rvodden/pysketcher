@@ -1,46 +1,65 @@
 import glob
+from nox import session, Session, options
 import shutil
-import tempfile
 
-import nox
-from nox import Session
-from nox_poetry import session
 
-nox.options.sessions = "lint", "safety", "tests", "examples"
+options.sessions = ["lint", "tests", "examples"]
+main_version = ["3.11"]
+supported_versions = main_version + ["3.9", "3.10"]
 locations = "pysketcher", "tests", "examples", "docs", "noxfile.py"
 
-main_version = ["3.9"]
-supported_versions = ["3.9", "3.10", "3.11"]
+
+def _lint(session: Session, install: bool = True) -> None:
+    if install:
+        session.install(".[lint]")
+    session.run("flake8")
+
+
+@session(python=False)
+def local_lint(session: Session) -> None:
+    _lint(session, install=False)
 
 
 @session(python=main_version)
 def lint(session: Session) -> None:
-    args = session.posargs or locations
-    session.install(
-        "darglint",
-        "flake8",
-        "flake8-bandit",
-        "flake8-black",
-        "flake8-bugbear",
-        "flake8-docstrings",
-        "flake8-import-order",
+    _lint(session, install=True)
+
+
+def _tests(
+    session: Session, cov_report: str = "xml:coverage.xml", install: bool = True
+) -> None:
+    if install:
+        session.install(".[tests]")
+    session.run(
+        "pytest", "--cov", "--cov-report", cov_report, "--junitxml=test-results.xml"
     )
-    session.run("flake8", *args)
+
+
+@session(python=False)
+def local_tests(session: Session):
+    _tests(session, "html", False)
 
 
 @session(python=supported_versions)
-def tests(session: Session) -> None:
-    session.install(".")
-    session.install("pytest", "coverage[toml]", "hypothesis", "pytest-cov")
-    session.run("poetry", "install", external=True)
-    session.run("pytest", "--cov")
+def tests(session: Session):
+    _tests(session)
+
+
+@session(python=False)
+def install(session: Session):
+    session.run("pip", "install", "-e", ".[lint,tests,documentation,build]")
 
 
 @session(python=supported_versions)
-def examples(session: Session) -> None:
-    session.install(".")
-    session.install("pytest", "coverage[toml]", "hypothesis", "pytest-cov")
-    session.run("poetry", "install", external=True)
+def build(session: Session):
+    session.run("pip", "install", ".[build]")
+    session.run("python", "-m", "build")
+
+
+def _examples(session: Session, install: bool = False) -> None:
+    if install:
+        session.install(".[tests]")
+
     session.run(
         "pytest",
         "--cov",
@@ -54,46 +73,32 @@ def examples(session: Session) -> None:
     )
 
 
-@session(python=main_version)
-def coverage(session: Session) -> None:
-    """Upload coverage data."""
-    session.install("coverage[toml]", "codecov")
-    session.run("coverage", "xml", "--fail-under=0")
-    session.run("codecov", *session.posargs)
+@session(python=False)
+def local_examples(session: Session):
+    _examples(session)
 
 
-@session(python=main_version)
-def black(session: Session) -> None:
-    args = session.posargs or locations
-    session.install("black", "blackdoc")
-    session.run("black", *args)
-    session.run("blackdoc", *args)
+@session(python=supported_versions)
+def examples(session: Session):
+    _examples(session, install=True)
 
 
-@session(python=main_version)
-def safety(session: Session) -> None:
-    with tempfile.NamedTemporaryFile() as requirements:
-        session.run(
-            "poetry",
-            "export",
-            "--dev",
-            "--format=requirements.txt",
-            "--without-hashes",
-            f"--output={requirements.name}",
-            external=True,
-        )
-        session.install("safety")
-        session.run("safety", "check", f"--file={requirements.name}", "--full-report")
-
-
-@session(python=main_version)
-def docs(session: Session) -> None:
+def _documentation(session: Session, install: bool = False) -> None:
     """Build the documentation."""
-    session.install(".")
-    session.install("sphinx", "sphinx-autodoc-typehints", "sphinx-rtd-theme")
-    session.install("pytest", "hypothesis")
+    if install:
+        session.install(".[documentation,tests]")
     session.run("pytest", "pysketcher")  # generate the images by running the docstrings
     for file in glob.glob("./pysketcher/images/*.png"):
         print(f"{file}")
         shutil.copy(file, "./docs/images")
     session.run("sphinx-build", "docs", "docs/_build")
+
+
+@session(python=main_version)
+def documentation(session: Session):
+    _documentation(session, install=True)
+
+
+@session(python=False)
+def local_documentation(session: Session):
+    _documentation(session)
