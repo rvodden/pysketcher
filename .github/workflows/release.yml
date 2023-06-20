@@ -14,7 +14,7 @@ jobs:
         architecture: x64
     - uses: FedericoCarboni/setup-ffmpeg@v1
     - run: pip install nox==2022.11.21
-    - run: nox -s build
+    - run: nox -s build-3.11
     - name: Publish
       env:
         TWINE_PASSWORD: ${{ secrets.PYPI_TOKEN }}
