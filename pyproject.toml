@@ -1,74 +1,85 @@
-[build-system]
-requires = [
-    "poetry_core>=1.0.7",
-    "nox>=2021.10.1",
-    "poetry==1.1.11",
-    "nox-poetry==0.8.6"
-    ]
-build-backend = "poetry.core.masonry.api"
-
-[tool.poetry]
+[project]
 name = "pysketcher"
-version = "0.0.10"
 description = "Geometric Sketching Utility for Python"
-license = "mit"
-authors = [
-    "Richard Vodden <richard@vodden.com>",
-    "Hans Petter Langtangen"
-]
 readme = "README.rst"
-packages = [{ include = "pysketcher" }]
-repository = "https://github.com/rvodden/pysketcher"
-homepage = "https://github.com/rvodden/pysketcher"
+requires-python = ">=3.9,<3.12"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Richard Vodden", email = "richard@vodden.com" },
+    { name = "Hans Petter Langtangen" }
+]
 keywords = ['sketch','graphics','scientific','engineering','geometry']
+dependencies = [
+    "numpy~=1.25.0",
+    "matplotlib~=3.7.1",
+    "scipy~=1.10.1",
+    "celluloid~=0.2.0"
+]
+dynamic = ["version"]
 
+[project.optional-dependencies]
+build = [
+    "build",
+    "twine"
+]
+tests = [
+    "hypothesis~=6.79.1",
+    "pytest~=7.3.2",
+    "coverage~=7.2.7",
+    "mypy~=0.991",
+    "wheel~=0.38.4",
+    "pytest-cov~=4.0.0",
+    "pytest-timeout~=2.1.0",
+    "nox-poetry~=1.0.2",
+    "flake8-docstrings~=1.6.0",
+    "six~=1.15.0",
+    "zipp~=3.11.0",
+    "flake8-bugbear~=22.12.6",
+    "typed-ast~=1.5.4",
+    "codecov~=2.1.10"
+]
+lint = [
+    "pylint~=2.15.9",
+    "flake8~=5.0.4",
+    "pydocstyle~=6.1.1",
+    "black~=23.3.0",
+    "flake8-black~=0.3.6",
+    "flake8-import-order~=0.18.2",
+    "flake8-bandit~=4.1.1",
+    "darglint~=1.7.0",
+    "blackdoc~=0.3",
+]
+precommit = [
+    "pre-commit~=2.21.0",
+    "commitizen~=2.39.1",
+]
+documentation = [
+    "sphinx~=7.0.1",
+    "furo~=2023.5.20",
+    "sphinx-autodoc-typehints~=1.23.2",
+    "recommonmark~=0.7.1",
+]
 
-[tool.poetry.dependencies]
-python = ">=3.9,<3.12"
-numpy = "^1.19.5"
-matplotlib = "^3.2.1"
-scipy = "^1.7.3"
-celluloid = "^0.2.0"
-sphinx = { version = ">=4.1.1,<6.0.0", optional=true }
-sphinx_rtd_theme = { version = ">=0.5,<1.2", optional=true }
-sphinx-autodoc-typehints = { version = "^1.11.1", optional=true }
+[project.urls]
+repository = "https://github.com/rvodden/pysketcher.git"
+homepage = "https://github.com/rvodden/pysketcher"
 
-[tool.poetry.dev-dependencies]
-hypothesis = "^6.61.0"
-pytest = "^7.2.0"
-pylint = "^2.15.9"
-flake8 = "^5.0.4"
-coverage = "^7.0"
-mypy = "^0.991"
-pydocstyle = "^6.1.1"
-black = "^22.12"
-wheel = "^0.38.4"
-recommonmark = "^0.7.1"
-pytest-cov = "^4.0.0"
-pytest-timeout = "^2.1.0"
-nox = "^2022.11.21"
-pre-commit = "^2.21.0"
-flake8-black = "^0.3.6"
-flake8-import-order = "^0.18.2"
-flake8-bandit = "^4.1.1"
-nox-poetry = "^1.0.2"
-flake8-docstrings = "^1.6.0"
-six = "^1.15.0"
-zipp = "^3.11.0"
-darglint = "^1.7.0"
-blackdoc = "^0.3"
-commitizen = "^2.39.1"
-safety = "^2.3.5"
-flake8-bugbear = "^22.12.6"
-typed-ast = "^1.5.4"
-codecov = "^2.1.10"
-'zest.releaser' = { version = "^7.0.0", extras = ['recommended'] }
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [
+    "setuptools>=61.0.0",
+    "setuptools-scm",
+    "setuptools-git-versioning",
+    "nox~=2022.11.21",
+]
 
-[tool.poetry.extras]
-docs = ["sphinx", "sphinx_rtd_theme", "sphinx-autodoc-typehints"]
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["pysketcher"]
+exclude = ["tests","figs","examples","docs"]
 
-[tool.poetry.scripts]
-beam1 = "examples.beam1:main"
+[tool.setuptools-git-versioning]
+enabled = true
 
 [tool.pytest.ini_options]
 testpaths = ["tests", "pysketcher"]
@@ -86,26 +97,13 @@ source = ["pysketcher/"]
 [tool.coverage.report]
 show_missing = true
 
-[tool.tox]
-legacy_tox_ini = '''
-[tox]
-isolated_build = true
-envlist = py38
-
-[testenv]
-whitelist_externals = poetry
-commands =
-    poetry install -v
-    poetry run pytest
-'''
-
 [tool.isort]
 line_length = 88
 multi_line_output = 3
 include_trailing_comma = true
 known_third_party = "celery,django,environ,pyquery,pytz,redis,requests,rest_framework"
 
-[mypy]
+[tool.mypy]
 # follow and type check all modules, including third-party ones
 follow_imports = "normal"
 # precede all errors with “note” messages explaining the context of the error
