@@ -34,7 +34,7 @@ tests = [
     "flake8-docstrings~=1.6.0",
     "six~=1.15.0",
     "zipp~=3.11.0",
-    "flake8-bugbear~=22.12.6",
+    "flake8-bugbear>=22.12.6,<23.7.0",
     "typed-ast~=1.5.4",
     "codecov~=2.1.10"
 ]
