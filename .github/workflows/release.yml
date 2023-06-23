@@ -6,17 +6,24 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
+    name: Build & Publish
+    environment: release
+    permissions:
+      # IMPORTANT: this permission is mandatory for trusted publishing
+      id-token: write
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-python@v1
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Install Python
+      uses: actions/setup-python@v1
       with:
         python-version: '3.11'
         architecture: x64
-    - uses: FedericoCarboni/setup-ffmpeg@v1
-    - run: pip install nox==2022.11.21
-    - run: nox -s build-3.11
-    - name: Publish
-      env:
-        TWINE_PASSWORD: ${{ secrets.PYPI_TOKEN }}
+    - name: Install FFMpeg
+      uses: FedericoCarboni/setup-ffmpeg@v1
+    - name: Build
       run: |
-        twine upload dist/
+        pip install ".[build]"
+        nox -s build-3.11
+    - name: Publish
+      uses: pypa/gh-action-pypi-publish@release/v1
