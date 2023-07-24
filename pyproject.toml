@@ -57,7 +57,7 @@ precommit = [
 documentation = [
     "sphinx~=7.0.1",
     "furo~=2023.5.20",
-    "sphinx-autodoc-typehints~=1.23.2",
+    "sphinx-autodoc-typehints>=1.23.2,<1.25.0",
     "recommonmark~=0.7.1",
 ]
 
