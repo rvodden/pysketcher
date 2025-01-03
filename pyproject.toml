@@ -2,7 +2,7 @@
 name = "pysketcher"
 description = "Geometric Sketching Utility for Python"
 readme = "README.rst"
-requires-python = ">=3.9,<3.12"
+requires-python = ">=3.10,<4"
 license = { file = "LICENSE" }
 authors = [
     { name = "Richard Vodden", email = "richard@vodden.com" },
