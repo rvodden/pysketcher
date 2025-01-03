@@ -6,10 +6,10 @@ mx = 1e30
 mn = 1e-30
 
 
-def make_float() -> SearchStrategy[float]:
+def make_float(max: float = mx, min: float = mn) -> SearchStrategy[float]:
     strategy = floats(
-        min_value=mn,
-        max_value=mx,
+        min_value=min,
+        max_value=max,
         allow_nan=False,
         allow_infinity=False,
         allow_subnormal=False,
