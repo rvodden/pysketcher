@@ -15,15 +15,15 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: Install Python
-      uses: actions/setup-python@v1
+      uses: actions/setup-python@v5
       with:
-        python-version: '3.11'
+        python-version: '3.13'
         architecture: x64
     - name: Install FFMpeg
       uses: FedericoCarboni/setup-ffmpeg@v1
     - name: Build
       run: |
         pip install ".[build]"
-        nox -s build-3.11
+        nox -s build-3.13
     - name: Publish
       uses: pypa/gh-action-pypi-publish@release/v1

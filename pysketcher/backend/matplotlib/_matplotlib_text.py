@@ -38,5 +38,5 @@ class MatplotlibText(MatplotlibAdapter):
             text.text,
             horizontalalignment=mpl_style.alignment,
             fontsize=mpl_style.font_size,
-            **kwargs
+            **kwargs,
         )

@@ -2,7 +2,7 @@
 name = "pysketcher"
 description = "Geometric Sketching Utility for Python"
 readme = "README.rst"
-requires-python = ">=3.10,<4"
+requires-python = ">=3.11,<4"
 license = { file = "LICENSE" }
 authors = [
     { name = "Richard Vodden", email = "richard@vodden.com" },
@@ -33,10 +33,7 @@ tests = [
     "pytest-timeout>=2.1,<2.4",
     "nox-poetry~=1.0.2",
     "flake8-docstrings>=1.6,<1.8",
-    "six>=1.15,<1.18",
-    "zipp>=3.19.2,<3.22",
     "flake8-bugbear>=24.4.26,<24.11.0",
-    "typed-ast~=1.5.4",
     "codecov~=2.1.10"
 ]
 lint = [

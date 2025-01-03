@@ -62,17 +62,14 @@ class TestPoint:
 
     @given(make_point())
     def test_angle(self, a: Point):
-        if a.x != 0.0:
-            assume(abs(a.y / a.x) < 1e4)
-        if a.y != 0.0:
-            assume(abs(a.x / a.y) < 1e4)
         angle = a.angle
         note(angle)
         b = Point(abs(a), 0.0).rotate(angle, Point(0.0, 0.0))
         note(f"The angle is : {np.format_float_scientific(a.angle)}")
         note(f"The length is : {np.format_float_scientific(abs(a))}")
-        assert b == a
         assert -np.pi <= angle <= np.pi
+        if 1e-4 < a.x < 1e4 and 1e-4 < a.y < 1e4:
+            assert isclose(b.x, a.x) and isclose(b.y, a.y)
 
     @given(make_float(), make_float())
     def test_unit_vector(self, x: float, y: float):

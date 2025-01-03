@@ -6,7 +6,6 @@ from hypothesis.errors import InvalidArgument
 
 
 def given_inferred(func):
-
     (
         args,
         varargs,

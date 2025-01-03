@@ -14,7 +14,6 @@ class LineAnnotation(Text):
     def __init__(
         self, text: str, line: Line, text_position: TextPosition = TextPosition.MIDDLE
     ):
-
         spacing = self._DEFAULT_SPACING
 
         if text_position == TextPosition.START:

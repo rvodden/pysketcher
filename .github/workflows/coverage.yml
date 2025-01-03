@@ -8,11 +8,11 @@ jobs:
         steps:
             - uses: actions/checkout@v2
             - uses: FedericoCarboni/setup-ffmpeg@v1
-            - uses: actions/setup-python@v1
+            - uses: actions/setup-python@v5
               with:
-                  python-version: '3.11'
+                  python-version: '3.13'
                   architecture: x64
-            - run: pip install nox==2022.11.21
-            - run: nox --sessions tests-3.11 examples-3.11
+            - run: pip install nox==2024.10.09
+            - run: nox --sessions tests-3.13 examples-3.13
               env:
                   CODECOV_TOKEN: ${{secrets.CODECOV_TOKEN}}
