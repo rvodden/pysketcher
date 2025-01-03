@@ -9,13 +9,13 @@ jobs:
                 os-version:
                     - "ubuntu-22.04"
                 python-version:
-                    - "3.9"
-                    - "3.10"
                     - "3.11"
+                    - "3.12"
+                    - "3.13"
                 experimental:
                     - false
                 include:
-                    - python-version: "3.11"
+                    - python-version: "3.13"
                       os-version: "windows-2019"
                       experimental: true
         continue-on-error: ${{ matrix.experimental }}
