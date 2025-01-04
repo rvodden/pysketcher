@@ -47,7 +47,6 @@ class VelocityProfile(Composition):
         num_arrows: int,
         scaling: float = 1,
     ):
-
         self._start = start
         self._height = height
         self._profile = profile

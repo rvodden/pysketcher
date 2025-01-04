@@ -4,8 +4,8 @@ import shutil
 
 
 options.sessions = ["lint", "tests", "examples"]
-main_version = ["3.11"]
-supported_versions = main_version + ["3.9", "3.10"]
+main_version = ["3.13"]
+supported_versions = main_version + ["3.11", "3.12"]
 locations = "pysketcher", "tests", "examples", "docs", "noxfile.py"
 
 

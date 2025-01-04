@@ -34,7 +34,6 @@ class Rectangle(Curve):
     """
 
     def __init__(self, lower_left_corner: Point, width: float, height: float):
-
         self._width = width
         self._height = height
         self._lower_left_corner = lower_left_corner
