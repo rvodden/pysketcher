@@ -33,7 +33,7 @@ tests = [
     "pytest-timeout>=2.1,<2.4",
     "nox-poetry~=1.0.2",
     "flake8-docstrings>=1.6,<1.8",
-    "flake8-bugbear>=24.4.26,<24.11.0",
+    "flake8-bugbear>=24.4.26,<24.13.0",
     "codecov~=2.1.10"
 ]
 lint = [
