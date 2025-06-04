@@ -24,7 +24,7 @@ build = [
     "nox"
 ]
 tests = [
-    "hypothesis>=6.104.1,<6.134.0",
+    "hypothesis>=6.104.1,<6.136.0",
     "pytest>=8.2.2,<8.5.0",
     "coverage>=7.2.7,<7.9.0",
     "mypy>=0.991,<2.0",
